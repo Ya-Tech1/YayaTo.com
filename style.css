@@ -1,0 +1,642 @@
+/* video source : Comment Créer Un Site Web Avec HTML CSS et JAVASCRIPT */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;      /* defilement fluide sur la page */
+}
+
+p{
+    font-weight: 300;
+    color: #111;
+}
+
+
+/* partie 1 : la nav bar */
+
+header{               /* parametrage de la Boite nav bar */
+    position: fixed;   /* rendre fixe la nav Bar */
+    top: 0%;
+    left: 0%;
+    padding: 20px 10px;
+    width: 100%;
+    z-index: 1;
+    display: flex;           /* aligne ses elmts */
+    justify-content: space-evenly;   
+    align-items: center;      /* alignet les elmts box au centre */
+    transition: 0.5s;
+}
+
+.logo{  /* logo de la nav bar */
+    
+    position: relative;
+    top: 0;
+    left: 0;
+    /*width: 100%;
+    height: auto;
+    
+    
+    /*color: rgb(17, 1, 87);
+    font-weight: bold;
+    
+    font-size: 2em;
+    text-decoration: none;   /* faire disparaitre le text qui est lien en html cad souligné et avec une couleur bleur */
+}
+.logo span{  
+       
+    /*color: #fb911f;  /* styliser ce text qu'on n'a fait disparaitre ici haut */
+}
+
+.navbar{     /*configurer toute la nav bar en flex. Puis en position relative pour dire qu'il aura tjrs la position la à haut */
+    display: flex;
+    position: relative;
+}
+.navbar li{     /* supprimer les points sur les elmts li */
+    list-style: none;
+}
+.navbar a{      /* definition de chaque elmt de la nav bar  (Acceuil, ...)  */
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-left: 30px;   /* marge-gauche des chaques elmt */
+    font-weight: 700;    /* taille de la police */
+}
+
+.btn-reserve{             /*ajouter un style propre au btn reservation */ 
+    padding: 5px 20px;
+    background: #fb911f;
+   margin-top: -10px;
+   text-transform:uppercase ;    /* faire le texte en majuscule */
+}
+
+.btn-reserve:hover{
+    background: #d87710;
+    transition: ease-out;
+}
+
+header .navbar li a:hover{       /* action du passage de la souris au elmts de la nav-bar */
+    color: #fb911f;                       /* couleur que le texte prend */
+    border-bottom: 2px solid #fb911f;      /* la petite barre qui s'ajoute */
+}
+
+
+
+/* partie 2:Definition de premiere section ou sous page */
+
+.banniere{          /*definition de la sous forme de page en background et positionnement */
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./images/pageheader-banner.jpg);
+    background-size: cover;
+}
+
+.banniere .contenu{    /* cantrer le contenu et sa talle par rapport à dans cette background */
+    max-width: 70%;
+    text-align: center;
+}
+.banniere .contenu h2{    /* definition propre du titre "Que de plats delicieux " */
+    color: rgb(2, 4, 75);
+    font-size: 3em;
+    text-transform: capitalize;
+}
+.contenu p:nth-child(2){    /* nth-child veut dire sous la balise P aller à son deuxieme balise principale  */
+    color: rgb(2, 1, 1);
+    font-size: 1.2em;
+}
+
+.btn1{                  /* definition propre du btn "NOTRE MENU"*/
+    font-size: 1em;
+    color: #fff;
+    background: #fb911f;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;         /* enlever la configuration physique native de html d'un lien internet */
+    text-transform: uppercase;     /* faire ce text majuscule  */
+    letter-spacing: 2px;       /* espacement entre ses lettres */
+    transition: 0.5s;
+    margin-left: 10px;
+}
+.btn2{                /* definition propre du btn "RESERVATION"*/
+    font-size: 1em;
+    color: #fff;
+    background: #2a4963;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    margin-left: 10px;
+}
+
+.btn1:hover{           /* le hover du btn "NOTRE MENU" */ 
+letter-spacing: 4px;
+}
+
+
+
+
+/*PARTIE 3 :   section A propos  */
+
+section{      /* definition de de la marge interieur à laisser sur cette section  */
+    padding: 100px;
+    
+}
+.row{         /* subdivision de la page en 2 flexbox */
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row .col50{      /* definition de la taille de chaque flex box */
+    position: relative;
+    width: 48%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.row .col50 h2{   /* marge du titre de cette section */
+     margin-bottom: 20px;
+}
+
+.titre-texte{     /* definition parametre du tire */
+    color: #000;
+    font-size: 2em;
+    font-weight: 300px;
+    text-transform: capitalize;
+}
+
+.titre-texte span{    /* parapetre propre du A du titre */
+    color: #fb911f;
+    font-size: 1.5em;
+    font-weight: 700px;
+}
+
+.row .col50 img{      /* definition de l'image de cette section */
+    height: auto;
+    width: 100%;
+    position: relative;
+    padding-right: 100px;
+}
+
+
+
+/* PARTIE 4 :  section MENU     */
+
+.menu{   /* la marge que toute la section aura tjrs */
+    margin-top: -100px;
+}
+
+.titre{         /* parametrage de ces deux Text : le titre et la phrase suivante */ 
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;   /* place ela phrase et le titre ds une flexbox en colonne */
+}
+
+.menu .contenu{     /* rendre les elmts de box (les images en de flex box */ 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.menu .contenu .box{     /* donner de la bordure et taille à chaque flex box */
+    width: 350px;
+    margin: 20px;
+    border: 20px solid #fff;
+    box-shadow: 20px 15px 35px rgba(0,0,0, 0.8);
+}
+
+.menu .contenu .box .imbox{      /* definir la surface de l'image */
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.menu .contenu .box .imbox img{    /* donner de la taille à chaque image par rapport à la flex box */
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.menu .contenu .box .text{      /* donner de la taille du text de chaque image par rapport à la flex box */
+    text-align: center;
+    font-weight: 300px;
+    color: #111;
+}
+
+.menu .contenu .box .text h3{    /* amelioration de texte */
+    font-weight: 400;
+}
+
+
+/*  PARTIE 5 : Nos Experts  */
+
+.expert{
+    margin-top:-100px;
+}
+
+.expert .contenu{   /* definition du cadre generale de toute les images  */    
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.expert .contenu .box{       /* reglage de chaque box */
+    width: 250px;
+    margin: 15px;
+}
+.expert .contenu .box img{     /* reglage de l'image la hauteur de l'image par rapport à sa boite */
+    position: relative;
+    width: 100%;       /* image occupe toute la largeur */
+    height: 300px;        /* hauteur que l'image aura dans la box */
+    top: 0;            /* au sommet de n'est laissé aucun espacement */
+    left: 0;           /* à gauche de n'est laissé aucun espacement */
+    object-fit: cover;  /* l'image ne doit pas se repeter */
+}
+
+.expert .contenu .box h3{      /* reglage de taille de police, coleur et positionnement de texte */ 
+    color: #111;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+
+
+
+
+/* PARTIE 6 :   */
+
+.temoignage{
+    background-image: url(./images/bg2.jpg);
+    background-size: cover;
+}
+
+.temoignage .contenu{    /* tranformet les elmts img + photo en des flex-box */
+    display: flex;
+    margin-top: 40px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;    /* alignement de ces boites sur une ligne horizontal */  
+}
+
+.temoignage .contenu .box{    /* definition de la taille des boites  */
+    width: 340px;
+    margin: 20px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 40px;
+}
+
+.temoignage .contenu .box .imbox{   /* definition de la boite circle de l'image */
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    position: relative;         /* Taille de la petite au sommet de box */
+    margin-bottom: 20px;
+    overflow: hidden;           /* cachez la partie entourante */
+}
+
+.temoignage .contenu .box .imbox img{
+    position: relative;     /* positionner la petite image */
+    width: 100%;    
+    height: 100%;
+    top:0;
+    left:0;
+    object-fit: cover;      /* sans repeter l'img */
+    justify-content: center;
+    align-items: center;
+}
+
+.temoignage .contenu .box .text{     /* desing du text commantaire */
+    text-align: center;      /* centrer le text temoignage sous chaque photo */
+    color: #666;
+    font-style: italic;
+}
+
+.temoignage .contenu .box .text h3{    /* definition du nom du temoigneur */
+    color: #f8972f;
+    margin-top: 20px;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.blanc .titre-texte{    /* ce est le titre de cette section */
+    color: #fff;
+}
+
+.blanc .titre-texte,
+.blanc p{               /* design du titre de la section et la premiere phase */
+    color: #fff;
+}
+
+
+/* Partie 7 : Contact */
+
+.contact{
+    background-image: url(./images/img-form.jpg);
+    background-size: cover;
+    box-shadow: 2px 2px 12px rgba(0,0,0, 0.8);
+    width: 100%;
+    background-position: unset;
+}
+
+.contactform{         /* definition de la boite enclava les input */
+    padding: 75px 50px;
+    background: #fff;    /* background de la zone regroupant seulement les inputs */
+    box-shadow: 5px 15px 50px rgba(0,0,0, 0.8);
+    max-width: 500px;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 38%;         /* positionnement à droite */
+}
+
+.contactform .inputboite{  /* definition de  dimension elastique des input*/
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;     /* marge du coté haut de chaque input */
+}
+
+.contactform h3{    /* design du text ds la boite de formulaire */
+    color: #111;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.contactform .inputboite input,
+.contactform .inputboite textarea{  /* donner de forme specique à chaque input */
+    width: 100%;
+    border: 1px solid #555;
+    padding: 10px;
+    color: #111;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    resize: none;     /* refuser à ce que les inputs soit redimensionnable */
+}
+
+.contactform .inputboite input[type="submit"]{  /* modelisation du bouton Envoyer */
+    font-size: 1em;
+    font-weight: 700;
+    color: #ffff;
+    background: #fb911f;
+    display: inline-block;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    outline: none;
+    border: none;
+    transition: 0.5s;
+    max-width: 120px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* Partie 5 :        */
+
+.copyright{
+    padding: 20px 40px;
+    border-top: 2px solid rgba(0,0,0, 0.1);
+    background: rgba(228,222,222,);
+    text-align: center;
+}
+
+.copyright p:nth-child(1){
+    color: #333;
+}
+
+.copyright a {
+    color: #fb911f;
+    text-decoration: none;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.contact .titre-text span{
+    color: #fb911f;
+    font-size: 2em;
+}
+
+
+
+/* personnalisation de la bare de recherche */
+
+header.sticky{ 
+    background: #fff;
+    padding: 10px 10px;
+    box-shadow: 0px 5px 20px rgba(0,0,0, 0.05);
+}
+
+header.sticky .logo{    /* changer la couleur du Resto lorsq'il y a eu scrolling */
+    color: #000;
+}
+
+header.sticky .navbar li a {  /* changer la couleur de des elmts de nav bar en noir orsqu'il y a scrolling de la page */ 
+    color: #000;
+}
+
+header.sticky li a:hover{       /* action qu passage de souris sur l'elmt d nav-bar pendant le scrolling */
+    color: #fb911f;
+    border-bottom: 2px solid #fb911f;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 991px) {
+header, 
+header.sticky{
+    padding: 10px 20px;
+}
+
+header .navbar li{
+    margin-left: 0px;
+}
+
+header .navbar li a {
+    text-decoration: none;
+    color: #111;
+    font-size: 1.6em;
+    font-weight: 300;
+}
+
+.navbar{
+    display: none;
+}
+section{
+    padding: 20px;
+}
+
+header .navbar.active{        /* design des elmts de la menuToggle lorsque activer */
+    width: 100%;
+    height: calc(100% -68px);
+    position: fixed;
+    top: 68px;
+    left:0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #ffff;
+    align-items: center;
+}
+
+.menuToggle{              /* Definition du menuToggle   */
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-image: url(./images/menu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    background-size: 30px;
+    background-color: #fb911f
+}
+
+.menuToggle.active
+{
+    background-image: url(./images/close.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-origin: center;
+}
+
+header.sticky .menuToggle{   /* affichez le menuToggle lorsque activer */
+    filter: invert(1);
+}
+
+
+.banniere .contenu h2{
+    font-size: 2em;
+}
+
+.row .col50 img{
+    margin-left: 18%;
+}
+
+.contenu p:nth-child(2){
+    font-size: 1.2em;
+}
+.expert{
+    margin-top: 0px;
+}
+
+.menu{
+    margin-top: 0px;
+}
+
+.row{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.temoignage h2{
+    font-size: 2em;
+    text-align: center;
+}
+
+.temoignage p{
+text-align: center;
+}
+
+.contactform{
+    margin-left: 25%;
+}
+
+
+    .row .col50 {
+        position: relative;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    
+    }
+
+    .row{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px)
+{
+    .banniere .contenu h2{
+        font-size: 2.2em;
+        color: #fff;
+    }
+
+    .titre-text{
+        color: #000;
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+
+    .temoignage h2 
+    {
+        font-size: 1.1em;
+    }
+
+    .temoignage p{
+        text-align: center;
+    }
+}
+@media (max-width: 995px)
+{
+    .banniere .contenu h2{
+        margin-top: 50px;
+        font-size: 1.8em;
+        color: rgb(2, 3, 114);
+    }
+
+    .titre-text{
+        color: #000;
+        font-size: 15px;
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+
+    .temoignage h2 
+    {
+        font-size: 1.1em;
+    }
+
+    .temoignage p{
+        text-align: center;
+    }
+}
